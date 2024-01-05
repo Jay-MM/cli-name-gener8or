@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Jay-MM/cli-name-gener8or#readme",
   "dependencies": {
     "chalk-animation": "^2.0.3",
+    "inquirer": "^9.2.12",
     "random-word-slugs": "^0.1.7"
   }
 }
