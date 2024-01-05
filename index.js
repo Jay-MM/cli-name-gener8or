@@ -17,23 +17,27 @@ inquirer.prompt([
     choices: ["rainbow","pulse","glitch","radar","neon","karaoke"]
   }
 ])
-  .then(answers => {
-    console.log(answers)
+// .then( answers => {
+// console.log(answers)
+// const { length, animationType } = answers
+
+  .then(({ length, animationType })  => {//can destructure right away 
+    
 
 
-    const bandName = generateSlug(answers.length, { format: 'title' })
+    const bandName = generateSlug(length, { format: 'title' })
 
-    if ( answers.animationType === "pulse") {
+    if ( animationType === "pulse") {
       chalkAnimation.pulse(bandName)
-      } else if (answers.animationType === "glitch") {
+      } else if (animationType === "glitch") {
         chalkAnimation.glitch(bandName)
-      } else if (answers.animationType === "radar") {
+      } else if (animationType === "radar") {
         chalkAnimation.radar(bandName)
-      } else if (answers.animationType === "neon") {
+      } else if (animationType === "neon") {
         chalkAnimation.neon(bandName)
-      } else if (answers.animationType === "rainbow") {
+      } else if (animationType === "rainbow") {
         chalkAnimation.rainbow(bandName)
-      } else if (answers.animationType === "karaoke") {
+      } else if (animationType === "karaoke") {
         chalkAnimation.karaoke(bandName)
       }
   })
